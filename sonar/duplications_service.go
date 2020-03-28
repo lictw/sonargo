@@ -8,8 +8,8 @@ type DuplicationsService struct {
 }
 
 type DuplicationsShowObject struct {
-	Duplications []*Duplication `json:"duplications,omitempty"`
-	Files        *Files         `json:"files,omitempty"`
+	Duplications []*Duplication   `json:"duplications,omitempty"`
+	Files        map[string]*File `json:"files,omitempty"`
 }
 
 type Block struct {
@@ -20,12 +20,6 @@ type Block struct {
 
 type Duplication struct {
 	Blocks []*Block `json:"blocks,omitempty"`
-}
-
-type Files struct {
-	One   *File `json:"1,omitempty"`
-	Two   *File `json:"2,omitempty"`
-	Three *File `json:"3,omitempty"`
 }
 
 type File struct {
